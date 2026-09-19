@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Courses</title>
+    <title>My UB Website</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
 
         body {
     font-family: Arial;
@@ -19,133 +23,297 @@
     background-attachment: fixed;
 }
 
+/* TECHNOLOGY GRID */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 119, 182, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 119, 182, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+    );
+}
+/* MOVING TECHNOLOGY GLOW */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 168, 232, 0.12);
+
+    filter: blur(100px);
+
+    top: 20%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation: techGlow 10s ease-in-out infinite alternate;
+}
 
 
+@keyframes techGlow {
+
+    0% {
+        transform: translate(-60%, -50%);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(20%, -30%);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(60%, 20%);
+        opacity: 0.5;
+    }
+
+}
+
+        /* HEADER */
         header {
             background: linear-gradient(135deg, #003b73, #0077b6);
             color: white;
-            padding: 30px;
+            padding: 35px 20px;
+            text-align: center;
         }
 
         header h1 {
             margin: 0;
+            font-size: 40px;
         }
 
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* NAVIGATION */
         nav {
-            background-color: white;
+            background-color: #ffffff;
             padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         nav a {
-            color: #003b73;
+            display: inline-block;
             text-decoration: none;
+            color: #003b73;
             font-weight: bold;
-            margin: 15px;
+            margin: 0 15px;
+            padding: 8px;
         }
 
         nav a:hover {
             color: #0077b6;
         }
 
-        .courses {
-    	background-color: rgba(190, 215, 230, 0.88);
-    	width: 500px;
-    	margin: 40px auto;
-    	padding: 25px;
-    	border-radius: 12px;
-    	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        /* WELCOME SECTION */
+        .welcome {
+    text-align: center;
+    padding: 35px 20px 20px;
 	}
 
-        .course {
-            background-color: #f4f6f8;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 8px;
+.welcome h2 {
+    color: #ffffff;
+    font-size: 28px;
+
+    text-shadow:
+        0 0 8px rgba(0, 168, 232, 0.8),
+        0 0 20px rgba(0, 168, 232, 0.4);
+	}
+
+.welcome p {
+    color: #b9dff2;
+    font-size: 16px;
+
+    max-width: 900px;
+    margin: 0 auto;
+
+    line-height: 1.6;
+
+    text-shadow: 0 0 8px rgba(0, 168, 232, 0.25);
+	}
+
+        /* PAGE CARDS */
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto 40px;
+            padding: 20px;
         }
 
-        .course h3 {
+        .card {
+            background-color: white;
+            width: 210px;
+            min-height: 150px;
+            padding: 25px 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #222;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.3),
+        0 0 25px rgba(0, 168, 232, 0.35);
+	}
+
+        .card h3 {
+            color: #003b73;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* DASHBOARD */
+        .dashboard {
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .dashboard h2 {
             color: #003b73;
         }
 
+        #date {
+            font-weight: bold;
+            color: #0077b6;
+        }
+
+        /* FOOTER */
         footer {
             background-color: #003b73;
             color: white;
+            text-align: center;
             padding: 20px;
             margin-top: 40px;
         }
 
-    </style>
+        footer p {
+            margin: 5px;
+        }
 
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
-
-        <h1>My Courses</h1>
-
-        <p>University of Belize</p>
-
+        <h1>My Fundametals Of Computing Website</h1>
+        <p>Student Portfolio & Personal Website</p>
     </header>
 
-<nav>
-        <a href="index.html">Home</a>
-	<a href="fundamentals.html">Fundamentals of Computing</a>
-	<a href="programming.html">Programming</a>
-	<a href="english.html">English</a>
-        <a href="calculus.html">Calculus</a>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Back Home</a>
     </nav>
 
+    <!-- WELCOME -->
+    <section class="welcome">
+        <h2>COURSES!</h2>
 
-    <div class="courses">
+        <p>
+            Welcome to my Courses! this is where you would be able to see what courses i am currently taking. you can click on them and learn about the courses. Enjoy!!.
+        </p>
+    </section>
 
-        <h2>My Current Courses</h2>
+    <!-- PAGE LINKS -->
+    <div class="links">
 
+        <a href="programming.html" class="card">
+            <h2>📚 Programming</h2>
+        </a>
 
-        <div class="course">
+        <a href="fundamentals.html" class="card">
+            <h2>💻 Fundamentals of Computing</h2>          
+        </a>
 
-            <h3>💻 Fundamentals of Computing</h4>
+        <a href="english.html" class="card">
+            <h2>📝 English 2</h2>            
+        </a>
 
-            <p>Learning the fundamentals of computers and technology.</p>
-
-        </div>
-
-
-        <div class="course">
-
-            <h3>📚 Programming 1</h>
-
-            <p>Learning programming concepts and C++.</p>
-
-        </div>
-
-
-        <div class="course">
-
-            <h3>📝 College English 2</h4>
-
-            <p>Developing writing and communication skills.</p>
-
-        </div>
-
-	<div class="course">
-
-            <h3>🧮 Calculus 1</h3>
-
-            <p>Learning Advanced Math </p>
-
-        </div>
-
+        <a href="calculus.html" class="card">
+            <h2>👨‍🎓 Calculus</h2>            
+        </a>
 
     </div>
-
-
-    <footer>
+<footer>
 
         <p>University of Belize Student Website</p>
 
     </footer>
 
 </body>
-
 </html>
