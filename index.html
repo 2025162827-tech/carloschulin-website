@@ -1,343 +1,199 @@
+<!-- ABOUT ME SECTION -->
+<section id="about" class="about-section">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="about-container">
 
-    <title>My UB Website</title>
+        <div class="about-image">
+            <img src="me.jpeg" alt="Photo of me">
+        </div>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-    font-family: Arial;
-    margin: 0;
-    text-align: center;
-
-    background-image: url("laptop.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* TECHNOLOGY GRID */
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-    z-index: -1;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 119, 182, 0.08) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(0, 119, 182, 0.08) 1px,
-            transparent 1px
-        );
-
-    background-size: 50px 50px;
-
-    mask-image: linear-gradient(
-        to bottom,
-        transparent,
-        black 20%,
-        black 80%,
-        transparent
-    );
-}
-/* MOVING TECHNOLOGY GLOW */
-
-body::after {
-    content: "";
-
-    position: fixed;
-
-    width: 500px;
-    height: 500px;
-
-    border-radius: 50%;
-
-    background: rgba(0, 168, 232, 0.12);
-
-    filter: blur(100px);
-
-    top: 20%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    pointer-events: none;
-
-    z-index: -1;
-
-    animation: techGlow 10s ease-in-out infinite alternate;
-}
-
-
-@keyframes techGlow {
-
-    0% {
-        transform: translate(-60%, -50%);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: translate(20%, -30%);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translate(60%, 20%);
-        opacity: 0.5;
-    }
-
-}
-
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #003b73, #0077b6);
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        /* NAVIGATION */
-        nav {
-            background-color: #ffffff;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            display: inline-block;
-            text-decoration: none;
-            color: #003b73;
-            font-weight: bold;
-            margin: 0 15px;
-            padding: 8px;
-        }
-
-        nav a:hover {
-            color: #0077b6;
-        }
-
-        /* WELCOME SECTION */
-        .welcome {
-    text-align: center;
-    padding: 35px 20px 20px;
-	}
-
-.welcome h2 {
-    color: #ffffff;
-    font-size: 28px;
-
-    text-shadow:
-        0 0 8px rgba(0, 168, 232, 0.8),
-        0 0 20px rgba(0, 168, 232, 0.4);
-	}
-
-.welcome p {
-    color: #b9dff2;
-    font-size: 16px;
-
-    max-width: 900px;
-    margin: 0 auto;
-
-    line-height: 1.6;
-
-    text-shadow: 0 0 8px rgba(0, 168, 232, 0.25);
-	}
-
-        /* PAGE CARDS */
-        .links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1000px;
-            margin: 20px auto 40px;
-            padding: 20px;
-        }
-
-        .card {
-            background-color: white;
-            width: 210px;
-            min-height: 150px;
-            padding: 25px 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #222;
-
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.3),
-        0 0 25px rgba(0, 168, 232, 0.35);
-	}
-
-        .card h3 {
-            color: #003b73;
-            font-size: 22px;
-        }
-
-        .card p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* DASHBOARD */
-        .dashboard {
-            background-color: white;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .dashboard h2 {
-            color: #003b73;
-        }
-
-        #date {
-            font-weight: bold;
-            color: #0077b6;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #003b73;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 5px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            nav a {
-                display: block;
-                margin: 8px;
-            }
-
-            .card {
-                width: 90%;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- HEADER -->
-    <header>
-        <h1>My Fundamentals Of Computing Website</h1>
-        <p>Student Portfolio & Personal Website</p>
-    </header>
-
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="courses.html">Courses</a>
-        <a href="projects.html">Projects</a>
-        <a href="columns.html">Columns</a>
-        <a href="about.html">About Me</a>
+        <div class="about-content">
+	
+<nav>
+        <a href="index.html"><h2>Home<h2></a>
+       
     </nav>
 
-    <!-- WELCOME -->
-    <section class="welcome">
-        <h2>Welcome!</h2>
 
-        <p>
-            Welcome to my personal University of Belize website Project.
-            Here you can find information about my courses,
-            projects, columns and my about me.
-        </p>
-    </section>
+            <h2>About Me</h2>
 
-    <!-- PAGE LINKS -->
-    <div class="links">
+            <h3>Hello, I'm Carlos.</h3>
 
-        <a href="courses.html" class="card">
-            <h3>📚 Courses</h3>
-            <p>View the courses I am currently taking at UB.</p>
-        </a>
+            <p>
+                I am a student at the University of Belize with an interest
+                in computers, technology, programming, and learning how
+                things work.
+            </p>
 
-        <a href="projects.html" class="card">
-            <h3>💻 Projects</h3>
-            <p>Explore some of my school and programming projects.</p>
-        </a>
+            <p>
+                As a student, I am currently developing my skills in
+                programming and computer-related subjects. I am learning
+                C++, working with HTML and CSS, and exploring different
+                areas of computing.
+            </p>
 
-        <a href="columns.html" class="card">
-            <h3>📝 Columns</h3>
-            <p>Read my written work, opinions and assignments.</p>
-        </a>
+            <p>
+                I enjoy working with technology because there is always
+                something new to learn. I like solving problems, building
+                projects, and experimenting with different ideas to see
+                what I can create.
+            </p>
 
-        <a href="about.html" class="card">
-            <h3>👨‍🎓 About Me</h3>
-            <p>Learn more about me and my university journey.</p>
-        </a>
+            <p>
+                Outside of school, I enjoy music, cars, and audio equipment.
+                These interests have also helped me become more curious
+                about technology and how different systems work.
+            </p>
+
+            <div class="tech-info">
+
+                <div class="info-card">
+                    <span>💻</span>
+                    <h4>Technology</h4>
+                    <p>Interested in computers and technology.</p>
+                </div>
+
+                <div class="info-card">
+                    <span>⌨️</span>
+                    <h4>Programming</h4>
+                    <p>Currently learning C++ and web development.</p>
+                </div>
+
+                <div class="info-card">
+                    <span>🎓</span>
+                    <h4>Education</h4>
+                    <p>University of Belize student.</p>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <!-- STUDENT DASHBOARD --> <section class="dashboard"> <h2>Student Dashboard</h2> <p> Welcome to my student homepage! </p> <p> Today's date: <span id="date"></span> </p> <h3>My Current Courses</h3> <p>💻 Fundamentals of Computing</p> <p>📚 Programming 1</p> <p>📝 College English 2</p>🧮 Calculus 1 <p> </section>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>University of Belize Student Website</p>
-        <p>© 2026 My Personal Website</p>
-    </footer>
 
-    <!-- JAVASCRIPT -->
-    <script>
+<style>
 
-        let today = new Date();
+.about-section {
+    padding: 70px 20px;
+    background: #89CFF0;
+}
 
-        document.getElementById("date").innerHTML =
-            today.toLocaleDateString();
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
 
-    </script>
+    background: white;
+    padding: 45px;
 
-</body>
-</html>
-```
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 360px;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 1.4;
+}
+
+.about-content h2 {
+    color: #073b73;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.about-content h3 {
+    color: #0878b9;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* Small technology cards */
+
+.tech-info {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.info-card {
+    flex: 1;
+
+    background: #f3f7fb;
+
+    border-left: 4px solid #0878b9;
+
+    padding: 15px;
+
+    border-radius: 10px;
+}
+
+.info-card span {
+    font-size: 25px;
+}
+
+.info-card h4 {
+    color: #073b73;
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+.info-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .tech-info {
+        flex-direction: column;
+    }
+
+}
+
+</style>
