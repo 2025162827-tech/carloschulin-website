@@ -1,0 +1,199 @@
+<!-- ABOUT ME SECTION -->
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="me.jpeg" alt="Photo of me">
+        </div>
+
+        <div class="about-content">
+	
+<nav>
+        <a href="index.html"><h2>Home<h2></a>
+       
+    </nav>
+
+
+            <h2>About Me</h2>
+
+            <h3>Hello, I'm Carlos.</h3>
+
+            <p>
+                I am a student at the University of Belize with an interest
+                in computers, technology, programming, and learning how
+                things work.
+            </p>
+
+            <p>
+                As a student, I am currently developing my skills in
+                programming and computer-related subjects. I am learning
+                C++, working with HTML and CSS, and exploring different
+                areas of computing.
+            </p>
+
+            <p>
+                I enjoy working with technology because there is always
+                something new to learn. I like solving problems, building
+                projects, and experimenting with different ideas to see
+                what I can create.
+            </p>
+
+            <p>
+                Outside of school, I enjoy music, cars, and audio equipment.
+                These interests have also helped me become more curious
+                about technology and how different systems work.
+            </p>
+
+            <div class="tech-info">
+
+                <div class="info-card">
+                    <span>💻</span>
+                    <h4>Technology</h4>
+                    <p>Interested in computers and technology.</p>
+                </div>
+
+                <div class="info-card">
+                    <span>⌨️</span>
+                    <h4>Programming</h4>
+                    <p>Currently learning C++ and web development.</p>
+                </div>
+
+                <div class="info-card">
+                    <span>🎓</span>
+                    <h4>Education</h4>
+                    <p>University of Belize student.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+.about-section {
+    padding: 70px 20px;
+    background: #89CFF0;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    background: white;
+    padding: 45px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 360px;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 1.4;
+}
+
+.about-content h2 {
+    color: #073b73;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.about-content h3 {
+    color: #0878b9;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* Small technology cards */
+
+.tech-info {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.info-card {
+    flex: 1;
+
+    background: #f3f7fb;
+
+    border-left: 4px solid #0878b9;
+
+    padding: 15px;
+
+    border-radius: 10px;
+}
+
+.info-card span {
+    font-size: 25px;
+}
+
+.info-card h4 {
+    color: #073b73;
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+.info-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .tech-info {
+        flex-direction: column;
+    }
+
+}
+
+</style>
