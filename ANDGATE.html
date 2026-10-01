@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Courses</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        .background {
+            display: flex;
+            width: 100%;
+            height: 500px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003b73, #0077b6);
+            color: white;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #003b73;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #0077b6;
+        }
+
+        .courses {
+            background-color: white;
+            width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .course {
+            background-color: #f4f6f8;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .course h3 {
+            color: #003b73;
+        }
+
+        footer {
+            background-color: #003b73;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>PROJECT 1</h1>
+
+        <p>Fundamentals of Computing</p>
+
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Back</a>
+    </nav>
+
+    <div class="courses">
+
+        <h1>AND Gate Calculator</h1>
+
+        <div class="course">
+
+            <h3>Test it out!!</h3>
+
+            <p>Input A:</p>
+
+            <select id="inputA">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+
+            <p>Input B:</p>
+
+            <select id="inputB">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+
+            <br><br>
+
+            <button onclick="calculateAND()">Calculate</button>
+
+            <h3 id="result">Output: -</h3>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>University of Belize Student Website</p>
+
+    </footer>
+
+    <script>
+
+        function calculateAND() {
+
+            let A = Number(document.getElementById("inputA").value);
+            let B = Number(document.getElementById("inputB").value);
+
+            let output = A && B;
+
+            document.getElementById("result").innerHTML =
+                "Output: " + output;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
