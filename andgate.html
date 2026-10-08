@@ -94,24 +94,34 @@
         function toggleInputOne() {
 
             if (inputOne == 0) {
+
                 inputOne = 1;
+
             } else {
+
                 inputOne = 0;
+
             }
 
             updateGate();
+
         }
 
 
         function toggleInputTwo() {
 
             if (inputTwo == 0) {
+
                 inputTwo = 1;
+
             } else {
+
                 inputTwo = 0;
+
             }
 
             updateGate();
+
         }
 
 
@@ -147,22 +157,30 @@
 
             <td>
 
-                <h3>Input 1: <span id="inputOne">0</span></h3>
+                <h3>
+                    Input 1:
+                    <span id="inputOne">0</span>
+                </h3>
 
-                <img 
+                <img
+                    class="button"
+                    id="buttonOne"
                     src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png"
-                    width="100"
                     onclick="toggleInputOne();"
                 >
 
                 <br><br>
 
 
-                <h3>Input 2: <span id="inputTwo">0</span></h3>
+                <h3>
+                    Input 2:
+                    <span id="inputTwo">0</span>
+                </h3>
 
-                <img 
+                <img
+                    class="button"
+                    id="buttonTwo"
                     src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png"
-                    width="100"
                     onclick="toggleInputTwo();"
                 >
 
@@ -171,15 +189,22 @@
 
             <td>
 
-                <img id="andGate" src="and2off.png">
+                <img
+                    id="andGate"
+                    src="and2off.png"
+                >
 
-                <h2>Output: <span id="output">0</span></h2>
+                <h2>
+                    Output:
+                    <span id="output">0</span>
+                </h2>
 
             </td>
 
         </tr>
 
     </table>
+
 
 
     <footer>
