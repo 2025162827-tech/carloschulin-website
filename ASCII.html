@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Courses</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003b73, #0077b6);
+            color: white;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: lightblue;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #003b73;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 8px;
+        }
+
+        nav a:hover {
+            color: #0077b6;
+        }
+
+
+        table {
+            background-color: white;
+            margin-top: 40px;
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #003b73;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>PROJECT 4</h1>
+
+        <p>Fundamentals of Computing</p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="Project.html">Back</a>
+
+    </nav>
+
+<section>
+
+<p><img src="ascii.png" style="width:792px;height:528px;"></p>
+        
+			
+
+<p></p>
+<p></p>         
+
+
+<p>Enter any number from 0 to 127 :</p>
+<input id="inputdec" >
+<p></p>
+<button onclick="decToASCII()">Submit</button>
+<p></p>
+<p>ASCII Value : </p>
+<p id="demo"></p>
+
+<script>
+function decToASCII() {
+
+    x = document.getElementById("inputdec").value;
+
+    if (x < 0 || x > 127) {
+
+        document.getElementById("demo").innerHTML = "Enter a number from 0 to 127";
+
+    } else {
+
+        var res = String.fromCharCode(x);
+
+        document.getElementById("demo").innerHTML = res;
+
+    }
+
+}</script>
+
+
+
+</section>
+
+<footer>
+
+        <p>University of Belize Student Website</p>
+
+    </footer>
+
+</body>
+
+</html>

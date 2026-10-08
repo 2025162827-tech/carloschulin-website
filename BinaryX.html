@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Courses</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003b73, #0077b6);
+            color: white;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: lightblue;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #003b73;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 8px;
+        }
+
+        nav a:hover {
+            color: #0077b6;
+        }
+
+
+        table {
+            background-color: white;
+            margin-top: 40px;
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #003b73;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>PROJECT 3</h1>
+
+        <p>Fundamentals of Computing</p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="Project.html">Back</a>
+
+    </nav>
+<section>
+<h2>Project 1: Binary to Hexidecimal</h2>
+<hr>	
+
+
+<p><img src="bintohex.jpg"></p>
+        
+			
+         
+<input type="number" id="inputBin" value="">
+
+<p>Enter any 4 digit binary number:</p>
+
+<button onclick="binToHex()">Submit</button>
+
+<p>Hexidecimal Value : </p>
+<p id="demo"></p>
+
+<script>
+function binToHex() {
+  var x = document.getElementById("inputBin").value;
+  var hexOut = parseInt(x , 2).toString(16).toUpperCase();
+  document.getElementById("demo").innerHTML = hexOut;
+  }
+</script>
+
+
+
+</section>
+
+<footer>
+
+        <p>University of Belize Student Website</p>
+
+    </footer>
+
+</body>
+
+</html>
