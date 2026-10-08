@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Courses</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003b73, #0077b6);
+            color: white;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: lightblue;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #003b73;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 8px;
+        }
+
+        nav a:hover {
+            color: #0077b6;
+        }
+
+
+        table {
+            background-color: white;
+            margin-top: 40px;
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #003b73;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>PROJECT 2</h1>
+
+        <p>Fundamentals of Computing</p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="Project.html">Back</a>
+
+    </nav>
+	
+	<h3> To Test try to switch the buttons on the left to "1"<h2>
+
+
+    <script>
+
+        let inputOne = 0;
+        let inputTwo = 0;
+
+
+        function toggleInputOne() {
+
+            if (inputOne == 0) {
+                inputOne = 1;
+            } else {
+                inputOne = 0;
+            }
+
+            updateGate();
+        }
+
+
+        function toggleInputTwo() {
+
+            if (inputTwo == 0) {
+                inputTwo = 1;
+            } else {
+                inputTwo = 0;
+            }
+
+            updateGate();
+        }
+
+
+        function updateGate() {
+
+            document.getElementById("inputOne").innerHTML = inputOne;
+
+            document.getElementById("inputTwo").innerHTML = inputTwo;
+
+
+            if (inputOne == 1 && inputTwo == 1) {
+
+                document.getElementById("output").innerHTML = "1";
+
+                document.getElementById("andGate").src = "and2on.PNG";
+
+            } else {
+
+                document.getElementById("output").innerHTML = "0";
+
+                document.getElementById("andGate").src = "and2off.PNG";
+
+            }
+
+        }
+
+    </script>
+
+
+    <table style="width:100%">
+
+        <tr>
+
+            <td>
+
+                <h3>Input 1: <span id="inputOne">0</span></h3>
+
+                <img 
+                    src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png"
+                    width="100"
+                    onclick="toggleInputOne();"
+                >
+
+                <br><br>
+
+
+                <h3>Input 2: <span id="inputTwo">0</span></h3>
+
+                <img 
+                    src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png"
+                    width="100"
+                    onclick="toggleInputTwo();"
+                >
+
+            </td>
+
+
+            <td>
+
+                <img id="andGate" src="and2off.PNG">
+
+                <h2>Output: <span id="output">0</span></h2>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <footer>
+
+        <p>University of Belize Student Website</p>
+
+    </footer>
+
+</body>
+
+</html>
