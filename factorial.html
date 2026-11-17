@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Factorial</title>
+</head>
+<body>
+
+<p> Enter a number: </p>
+
+  <input type="number" id="num1">
+  <button onclick="add()">=</button>
+ 
+<p>The factorial of the number is: </p>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function add() {
+      let n1 = +num1.value;
+      let factorial = 1;
+
+      for (let i = 1; i <= n1; i++) {
+        factorial = factorial * i;
+      }
+
+      let resultElement = document.getElementById('result');
+      resultElement.textContent = factorial;
+    }
+  </script>
+
+</body>
+</html>
